@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>: travail discipline obéissance</title>
+    <style>
+        /* Styles généraux */
+body {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+/* Adaptation pour tablettes et mobiles */
+@media (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .vote-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .vote-option {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .voters-count {
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .voters-count span {
+        font-size: 40px;
+    }
+}
+
+/* Adaptation pour téléphones */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .vote-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .vote-option {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .voters-count {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .voters-count span {
+        font-size: 30px;
+    }
+}
+
+        /* Ajout de l'image en arrière-plan */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-image: url("ista.jpg");
+             /* Remplacez par le chemin de votre image */
+            background-size:contain; /* L'image couvre toute la page */
+            background-position: center; /* Centrer l'image */
+            background-attachment: fixed; /* Fixer l'image lorsque vous faites défiler */
+            transition: background-color 10.3s ease, transform 10.3s ease;
+            padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        h1:hover {
+            color: #4CAF50;
+            transform: scale(5.1);
+        }
+
+        .vote-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 10.3s ease, box-shadow 10.3s ease;
+        }
+
+        .vote-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .vote-option {
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .vote-option:hover {
+            background-color: #f1f1f1;
+            transform: translateX(10px);
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+
+        label:hover {
+            color: #4CAF50;
+            transform: scale(1.1);
+        }
+
+        input[type="radio"] {
+            transition: transform 4.2s ease, background-color 2.2s ease;
+        }
+
+        input[type="radio"]:checked {
+            transform: scale(1.5);
+            background-color: #0de6b7;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border-radius: 40em;
+        }
+
+        button:hover {
+            background-color: #df1f09;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .voters-count {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            background-color: #ffeb3b;
+            padding: 30px;
+            border-radius: 55px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 30.5s ease, background-color  30.3s ease, opacity 0.3s ease;
+        }
+
+        .voters-count span {
+            font-size: 50px;
+            color: #d32f2f;
+            animation: countAnimation 30.5s ease-in-out forwards;
+        }
+
+        @keyframes countAnimation {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .vote-container {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>votonz</h1>
+
+    <div class="vote-container">
+        <form id="voteForm">
+            <div class="vote-option">
+                <label for="president">Votez pour le Président:</label><br>
+                <input type="radio" id="president1" name="president" value="Candidat 1">
+                <label for="president1">Candidat 1</label><br>
+                <input type="radio" id="president2" name="president" value="Candidat 2">
+                <label for="president2">Candidat 2</label><br>
+                <input type="radio" id="president3" name="president" value="Candidat 3">
+                <label for="president3">Candidat 3</label>
+            </div>
+
+            <div class="vote-option">
+                <label for="vicepresident">Votez pour le Vice-Président:</label><br>
+                <input type="radio" id="vicepresident1" name="vicepresident" value="Candidat 1">
+                <label for="vicepresident1">Candidat 1</label><br>
+                <input type="radio" id="vicepresident2" name="vicepresident" value="Candidat 2">
+                <label for="vicepresident2">Candidat 2</label><br>
+                <input type="radio" id="vicepresident3" name="vicepresident" value="Candidat 3">
+                <label for="vicepresident3">Candidat 3</label>
+            </div>
+
+            <div class="vote-option">
+                <label for="secretaire">Votez pour le Secrétaire Général:</label><br>
+                <input type="radio" id="secretaire1" name="secretaire" value="Candidat 1">
+                <label for="secretaire1">Candidat 1</label><br>
+                <input type="radio" id="secretaire2" name="secretaire" value="Candidat 2">
+                <label for="secretaire2">Candidat 2</label><br>
+                <input type="radio" id="secretaire3" name="secretaire" value="Candidat 3">
+                <label for="secretaire3">Candidat 3</label>
+            </div>
+
+            <button type="submit">Soumettre mon vote</button>
+        </form>
+    </div>
+
+    <div class="voters-count">
+        <p>Nombre de votants <span id="voteCount">0</span></p>
+    </div>
+
+    <script>
+        // Initialisation du compteur de votants
+        let voteCount = localStorage.getItem('voteCount');
+        if (!voteCount) {
+            voteCount = 0;
+            alert(
+                document.getElementById="voteCount" );
+        }
+        document.getElementById('voteCount').textContent = voteCount;
+
+        document.getElementById("voteForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+          
+
+            // Vérifier si chaque poste a un choix
+            let presidentVote = document.querySelector('input[name="president"]:checked');
+            let vicePresidentVote = document.querySelector('input[name="vicepresident"]:checked');
+            let secretaireVote = document.querySelector('input[name="secretaire"]:checked');
+
+            // Si un des votes est manquant, alerter l'utilisateur
+            if (!presidentVote || !vicePresidentVote || !secretaireVote) {
+                alert("Vous devez voter pour chaque poste!");
+            } else {
+                // Mettre à jour le compteur de votants
+                voteCount = parseInt(voteCount) + 1;
+                localStorage.setItem('voteCount', voteCount); // Enregistrer le nombre de votants
+                document.getElementById('voteCount').textContent = voteCount;
+
+                // Afficher un message de remerciement avec les choix
+                alert("Merci pour votre vote! Voici vos choix:\n\n" +
+                    "Président: " + presidentVote.value + "\n" +
+                    "Vice-Président: " + vicePresidentVote.value + "\n" +
+                    "Secrétaire Général: " + secretaireVote.value);
+                  
+
+            }
+        });
+    </script>
+<footer>
+    <p>© 2025  | Tous droits réservés</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+CREATE DATABASE vote_db;
+
+USE vote_db;
+
+CREATE TABLE votes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    vote_option VARCHAR(255) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

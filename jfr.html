@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+
+  </script>
+  
+ 
+
+  <style>
+    /* Styles généraux */
+body {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+/* Adaptation pour tablettes et mobiles */
+@media (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .vote-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .vote-option {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .voters-count {
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .voters-count span {
+        font-size: 40px;
+    }
+}
+
+/* Adaptation pour téléphones */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .vote-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .vote-option {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .voters-count {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .voters-count span {
+        font-size: 30px;
+    }
+}
+
+    /* Styles généraux */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background-image:url("image vote.png");
+      background-size: cover;
+      background-attachment: fixed;
+      align-items: first baseline;
+      padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+
+    
+    }
+
+    .container {
+      text-align:center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 80px;
+      width: 700px;
+      animation: slideUp 5.0s alternate;
+    margin: 40px;
+    transition: 4s linear;
+    bottom: ease-in-out;
+      display:flow-root;
+      overflow: hidden;
+      transform: translate(-10px, -20px);
+
+      
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #131715;
+    }
+
+    .vote-option {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      animation: slideUp 5.0s alternate-reverse;
+    }
+
+    /* Animation du slide */
+
+    .vote-option:hover {
+      transform: scale(1.05);
+      background-color: #45a049;
+      animation: slideUp 5.0s alternate-reverse;
+    }
+
+    
+
+    .vote-option:active {
+      transform: scale(5.98);
+    }
+
+    .btn {
+      background-color: #2196F3;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-block;
+      font-family: inherit;
+      border-radius: 40em;
+      border: none ;
+      background-color: rgb(118, 95, 141);
+      background-image: linear-gradient(margin-right);
+      display:block;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    
+
+    .btn:hover {
+      animation: slideUp 10.0s alternate-reverse;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+      transform: scale(1.05);
+      background-color: #1976D2;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+      cursor: pointer;
+      animation-delay: 20.0s;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Animation du slide */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Choisissez votre rôle</h1>
+    
+
+    <a href="C:\Users\Alou Dembélé\Desktop\test hhy\jj.html" class="btn">voté pour les Candidants</a>  
+    <a href="C:\Users\Alou Dembélé\Desktop\test hhy\for.html" class="btn">Devenir Membres</a>
+    <h1><a href="C:\Users\Alou Dembélé\Desktop\test hhy\STATUT et REGLEMENTS SETI.docx" class="btn">Statut et Reglements de la SETI</a></h1>
+
+    <div class="result" id="result"></div>
+  </div>
+  <script>
+    function vote(option) {
+      // Affichage du résultat
+      document.getElementById('result').innerText = "Vous avez voté pour : " + option;
+
+      // Animation de clic
+      const resultElement = document.getElementById('result');
+      resultElement.style.opacity = '0';
+      setTimeout(() => {
+        resultElement.style.opacity = '1';
+      }, 500);
+
+      // Simulation d'un délai avant réinitialisation (exemple)
+      setTimeout(() => {
+        resultElement.innerText = '';
+      }, 5000);
+    }
+  
+    alert("TECHNOLAB VOUS SOUHAITS LA BIENVENUE");
+  </script>
+
+<footer>
+  <p>© 2025 ISTA| Tous droits réservés</p>
+</footer>
+</body>
+</html>
+

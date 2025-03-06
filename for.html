@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Vote</title>
+    <style>
+        /* Styles généraux */
+body {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+/* Adaptation pour tablettes et mobiles */
+@media (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .vote-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .vote-option {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .voters-count {
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .voters-count span {
+        font-size: 40px;
+    }
+}
+
+/* Adaptation pour téléphones */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .vote-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .vote-option {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .voters-count {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .voters-count span {
+        font-size: 30px;
+    }
+}
+
+        body {
+            font-family: italiant, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            background-image:url("menbre.png");
+            background-attachment: fixed;
+            background-size:cover;
+        }
+
+        .form-container {
+            background-color: transparent;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            transform: translateY(-30px);
+            animation:reverse 4s;
+            position:sticky;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            animation: fadeInText 1s ease-out forwards;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #17fca8f0;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 14px 0;
+            width: 100%;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="number"]:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        }
+
+        /* Animation: fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Animation: slide-in for form */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation: fade-in for heading */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Formulaire de Vote</h1>
+        <form id="voteForm">
+            <div class="form-group">
+                <label for="nom">Nom complet</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="annexe">Annexe</label>
+                <select id="annexe" name="annexe" required>
+                    <option value="bamako">Bamako</option>
+                    <option value="kayes">Kayes</option>
+                    <option value="koulikoro">Koulikoro</option>
+                    <option value="sikasso">Sikasso</option>
+                    <option value="segou">Segou</option>
+                    <option value="mopti">Mopti</option>
+                    <option value="tombouctou">Tombouctou</option>
+                    <option value="gao">Gao</option>
+                    <option value="kidal">Kidal</option>
+                    <option value="menaka">Menaka</option>
+                    <option value="taoudeni">Taoudéni</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="annexe">Poste(Organisation Structurelle de l’assemblée)</label>
+                <select id="annexe" name="annexe" required>
+                    <option value="bamako">VICE SECRETAIRE GENERALE</option>
+                    <option value="kayes">TERESORIER(E)</option>
+                    <option value="koulikoro">SECTION COMMUNICATION</option>
+                    <option value="sikasso">SECTION ORGANISATION</option>
+                    <option value="segou">SECTION PEDAGOGIE</option>
+                    <option value="mopti">COMMISSION AUX RELATIONS EXTERIEURE</option>
+                    <option value="tombouctou">COMMISSION CHARGEES A LA MOBILISATION DES RESSOURCES</option>
+                    <option value="gao">COMMISSION SPORTIVE / CULTURELLE</option>
+                
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+
+
+            <div class="form-group">
+                <label for="age">Âge</label>
+                <input type="number" id="age" name="age" required min="18">
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Numéro de téléphone</label>
+                <input type="numero="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="niveau">Niveau d'étude</label>
+                <select id="niveau" name="niveau" required>
+                    <option value="licence1">Licence 1</option>
+                    <option value="licence2">Licence 2</option>
+                    <option value="licence3">Licence 3</option>
+                    <option value="master1">Master 1</option>
+                    <option value="master2">Master 2</option>
+                    <option value="doctorat">Doctorat</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="motivation">Motivations pour postuler</label>
+                <textarea id="motivation" name="motivation" rows="4" required placeholder="Écrivez ici vos motivations pour postuler..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Soumettre">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Fonction pour valider le formulaire
+        document.getElementById("voteForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire pour la démo
+
+            // Récupérer les valeurs du formulaire
+            var nom = document.getElementById("nom").value;
+            var annexe = document.getElementById("annexe").value;
+            var age = document.getElementById("age").value;
+            var numero = document.getElementById("numero").value;
+            var niveau = document.getElementById("niveau").value;
+            var motivation = document.getElementById("motivation").value;
+
+            // Vérification si tous les champs sont remplis
+            if (nom && annexe && age && numero && niveau && motivation) {
+                alert("Formulaire soumis avec succès !\n" + 
+                      "Nom: " + nom + "\n" +
+                      "Annexe: " + annexe + "\n" +
+                      "Âge: " + age + "\n" +
+                      "Numéro: " + numero + "\n" +
+                      "Niveau d'étude: " + niveau + "\n" +
+                      "Motivations: " + motivation);
+            } else {
+                alert("Veuillez remplir tous les champs avant de soumettre.");
+            }
+        });
+    </script>
+<footer>
+    <p>© 2025 ISTA| Tous droits réservés</p>
+</footer>
+</body>
+</html>
